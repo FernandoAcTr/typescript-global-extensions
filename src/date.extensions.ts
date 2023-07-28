@@ -1,3 +1,16 @@
+export default {}
+
+declare global {
+  interface Date {
+    addDays(days: number): Date
+    addYears(years: number): Date
+    addHours(hours: number): Date
+    addMinutes(minutes: number): Date
+    isSameDay(date: Date): boolean
+    isLeapYear(): boolean
+  }
+}
+
 /**
  * Adds the specified number of days to the date.
  * @param days The number of days to add.

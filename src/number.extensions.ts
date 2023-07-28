@@ -1,3 +1,25 @@
+export default {}
+
+declare global {
+  interface Number {
+    toFixedNumber(decimals: number): number
+    isPositive(): boolean
+    isNegative(): boolean
+    isEven(): boolean
+    isOdd(): boolean
+    clamp(min: number, max: number): number
+    toRad(): number
+    toDeg(): number
+    isBetween(min: number, max: number): boolean
+    ceil(): number
+    floor(): number
+  }
+
+  interface Math {
+    randomInRange(min: number, max: number): number
+  }
+}
+
 /**
  * Formats the number with a fixed number of decimals.
  * @param decimals The number of decimal places to display.

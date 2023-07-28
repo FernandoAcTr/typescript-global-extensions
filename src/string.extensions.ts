@@ -1,3 +1,22 @@
+export default {}
+
+declare global {
+  interface String {
+    toNumber(): number | null
+    toBoolean(): boolean | null
+    toDate(): Date
+    isValidUrl(): boolean
+    isAlphanumeric(): boolean
+    capitalize(): string
+    reverse(): string
+    in(...values: string[]): boolean
+    countOccurrences(substring: string): number
+    truncate(maxLength: number, ellipsis?: string): string
+    padLeft(char: string, maxLength: number): string
+    padRight(char: string, maxLength: number): string
+  }
+}
+
 /**
  * Converts the string to a number.
  * @returns The numeric value of the string or null if the conversion fails.
