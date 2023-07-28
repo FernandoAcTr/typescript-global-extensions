@@ -21,7 +21,8 @@ String.prototype.isValidUrl = function () {
 }
 
 String.prototype.isAlphanumeric = function () {
-  return !isNaN(Number(this)) || (this.length === 1 && /^[a-zA-ZÀ-ÿ]+$/.test(this[0]))
+  const value = this.toString()
+  return /^[A-Za-z0-9]+$/.test(value)
 }
 
 String.prototype.capitalize = function () {
@@ -45,7 +46,7 @@ String.prototype.countOccurrences = function (substring: string) {
 String.prototype.truncate = function (maxLength: number, ellipsis: string = '...') {
   const value = this.toString()
   if (value.length <= maxLength) return value
-  return value.slice(0, maxLength - ellipsis.length) + ellipsis
+  return value.slice(0, maxLength - ellipsis.length).trim() + ellipsis
 }
 
 String.prototype.padLeft = function (char: string, maxLength: number): string {

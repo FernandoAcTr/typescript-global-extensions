@@ -34,6 +34,14 @@ Number.prototype.isBetween = function (min: number, max: number): boolean {
   return Number(this) >= min && Number(this) <= max
 }
 
+Number.prototype.floor = function () {
+  return Math.floor(Number(this))
+}
+
+Number.prototype.ceil = function () {
+  return Math.ceil(Number(this))
+}
+
 Math.randomInRange = function (min: number, max: number): number {
   return Math.random() * (max - min) + min
 }

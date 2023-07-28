@@ -4,19 +4,6 @@ Date.prototype.addDays = function (days: number): Date {
   return date
 }
 
-Date.prototype.isSameDay = function (date: Date): boolean {
-  return (
-    this.getFullYear() === date.getFullYear() &&
-    this.getMonth() === date.getMonth() &&
-    this.getDate() === date.getDate()
-  )
-}
-
-Date.prototype.isLeapYear = function (): boolean {
-  const year = this.getFullYear()
-  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
-}
-
 Date.prototype.addYears = function (years: number): Date {
   const date = new Date(this)
   date.setFullYear(date.getFullYear() + years)
@@ -35,10 +22,15 @@ Date.prototype.addHours = function (hours: number): Date {
   return date
 }
 
-Date.prototype.add = function (otherDate: Date): Date {
-  const date = new Date(this)
-  date.setDate(date.getDate() + otherDate.getDate())
-  date.setMonth(date.getMonth() + otherDate.getMonth())
-  date.setFullYear(date.getFullYear() + otherDate.getFullYear())
-  return date
+Date.prototype.isSameDay = function (date: Date): boolean {
+  return (
+    this.getFullYear() === date.getFullYear() &&
+    this.getMonth() === date.getMonth() &&
+    this.getDate() === date.getDate()
+  )
+}
+
+Date.prototype.isLeapYear = function (): boolean {
+  const year = this.getFullYear()
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
 }

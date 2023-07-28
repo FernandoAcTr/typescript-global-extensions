@@ -37,7 +37,6 @@ interface Array<T> {
 }
 
 interface Date {
-  add(otherDate: Date): Date
   addDays(days: number): Date
   addYears(years: number): Date
   addHours(hours: number): Date
@@ -56,6 +55,8 @@ interface Number {
   toRad(): number
   toDeg(): number
   isBetween(min: number, max: number): boolean
+  ceil(): number
+  floor(): number
 }
 
 interface Math {

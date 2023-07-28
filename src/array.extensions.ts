@@ -65,7 +65,7 @@ Array.prototype.replace = function (predicate, newValue) {
 }
 
 Array.prototype.notNone = function () {
-  return this.filter((item) => item !== null || item !== undefined)
+  return this.filter((item) => item != null || item != undefined)
 }
 
 Array.prototype.chunk = function (chunkSize: number) {
@@ -101,4 +101,3 @@ Array.prototype.merge = function <T>(...arrays: T[][]): T[] {
   }
   return Array.from(uniqueValues)
 }
-
