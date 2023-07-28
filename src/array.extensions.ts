@@ -1,30 +1,5 @@
 export default {}
 
-declare global {
-  interface Array<T> {
-    first(): T | undefined
-    last(): T | undefined
-    at(index: number): T | undefined
-    sum(): number
-    average(): number
-    distinct(): T[]
-    isEmpty(): boolean
-    max(): number | undefined
-    min(): number | undefined
-    shuffle(): T[]
-    groupBy<U>(selector: (e: T) => U): Array<{
-      key: U
-      values: Array<T>
-    }>
-    remove(value: T): T[]
-    replace(predicate: (e: T) => boolean, newValue: T): T[]
-    notNone(): T[]
-    chunk(chunkSize: number): T[][]
-    difference(...arrays: T[][]): T[]
-    merge(...arrays: T[][]): T[]
-  }
-}
-
 /**
  * Calculates the sum of all numeric elements in the array.
  * @returns The sum of the numeric elements in the array.

@@ -1,6 +1,6 @@
 {
   "name": "typescript-global-extensions",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Is a TypeScript library that provides a set of utility extensions designed to enhance global functionality in TypeScript projects. It enables developers to augment core TypeScript types and add additional methods or properties globally, extending the language's capabilities without modifying native prototypes directly. This library promotes clean and maintainable code by adhering to best practices and avoiding the potential pitfalls associated with direct prototype extension",
   "main": "index.js",
   "types": "dist/index.d.ts",
