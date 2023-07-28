@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest --verbose",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "keywords": [
     "extensions",
     "typescript"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Fernando Acosta",
   "license": "ISC",
   "devDependencies": {
